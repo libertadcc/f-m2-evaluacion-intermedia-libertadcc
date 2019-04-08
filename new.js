@@ -5,28 +5,40 @@ const input = document.querySelector('.input');
 const btn = document.querySelector('.btn');
 const result = document.querySelector('.result');
 
-
-
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 
+const random = getRandomNumber(100);
+console.log('na', random);
+
 const compare = () => {
 
-    const random = console.log(getRandomNumber(100));
+    const number = input.value;
+    console.log('nº', input.value)
 
-    const number = function write() {
-        console.log(input.value);
-    }
+    const diff = parseInt(number - random);
+    console.log('resta', diff);
 
-    if (number === random) {
-        console.log('tú ganas');
-    } else if (number > random) {
-        console.log('demasiado alto');
+    if (diff === 0 ) {
+        result.innerHTML='¡Has ganado, campeona!';
+        console.log('ok');
+    } else if (diff < 0){
+        result.innerHTML='Demasiado bajo';
+        console.log('bajo');
     } else {
-        console.log('demasiado bajo');
+        result.innerHTML='Demasiado alto';
+        console.log('alto');
     }
-    
 }
-
 btn.addEventListener('click', compare);
+
+//Contador
+
+// btn.onclick = function() {
+//     count += 1;
+//     try.innerHTML = count;
+
+//   };
+
+
