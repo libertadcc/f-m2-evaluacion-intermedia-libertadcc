@@ -1,0 +1,78 @@
+body {
+    background: gainsboro;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    padding: 50px;
+} 
+.title {
+    font-size: 32px;
+    text-align: center;
+}
+.counter{
+    position: relative;
+    top: 0px;
+    left: 80vw;
+    padding-right: 15px;
+    font-size: 60px;
+    color: red;
+    font-weight: 500;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tips{
+    font-size: 22px;
+    text-align:center;
+    margin-bottom: 20px;
+}
+.input{
+    margin-bottom: 20px;
+    width: 200px;
+    align-self: center;
+    font-size: 18px;
+}
+.btn{
+    height: 50px;
+    width: 120px;
+    align-self: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.result{
+    border: 2px solid blue;
+    color: blue;
+    height: 50px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.warning{
+    border: 2px solid orange;
+    color: orange;
+}
+.correct{
+    border: 2px solid green;
+    color: green;
+}
+.wrong{
+    border: 2px solid red;
+    color: red;
+}
+/* @keyframes fire {
+    0% {display: none;}
+    50% {width: 20px;
+        height: 20px;
+        background: red;
+        transform: scale(2);}
+    100% {
+        transform: scale(4);
+    }
+}
+.party{
+    animation: fire 5s infinite;
+} */
