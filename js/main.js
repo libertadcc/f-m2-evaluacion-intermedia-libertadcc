@@ -1,5 +1,5 @@
 'use strict';
-
+const confeti = document.querySelector('.confeti');
 const counter = document.querySelector('.counter');
 const input = document.querySelector('.input');
 const btn = document.querySelector('.btn');
@@ -16,7 +16,9 @@ console.log(random);
 const compare = () => {
     result.classList.remove('warning', 'correct', 'wrong');
     const number = parseInt(input.value);
-    if (number>100) {
+    if(number === NaN){
+        result.innerHTML= 'ey, ¿qué haces?';
+    }else if (number>100) {
         result.innerHTML='El número es menor que 100';
         result.classList.add('warning');
         i= i+1;
@@ -31,7 +33,7 @@ const compare = () => {
         result.classList.add('correct');
         i= i+1;
         counter.innerHTML= i;
-        // result.classList.add('party');
+        confeti.style.display="block";
     } else if (number < random){
         result.innerHTML='Demasiado bajo';
         result.classList.add('wrong');
@@ -43,6 +45,7 @@ const compare = () => {
         i= i+1;
         counter.innerHTML= i;
     }    
+    console.log(number);
 }
 
 
