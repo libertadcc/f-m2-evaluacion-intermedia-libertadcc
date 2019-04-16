@@ -4,27 +4,26 @@ const counter = document.querySelector('.counter');
 const input = document.querySelector('.input');
 const btn = document.querySelector('.btn');
 const result = document.querySelector('.result');
+
 let i = 0;
 counter.innerHTML = i;
+
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 
 const random = getRandomNumber(100);
-console.log(random);
 
 const compare = () => {
     result.classList.remove('warning', 'correct', 'wrong');
     const number = parseInt(input.value);
-    if(number === NaN){
-        result.innerHTML= 'ey, ¿qué haces?';
-    }else if (number>100) {
+    if (number>100) {
         result.innerHTML='El número es menor que 100';
         result.classList.add('warning');
         i= i+1;
         counter.innerHTML= i;
-    }else if(number<0) {
-        result.innerHTML='El número es mayor que 0';
+    }else if(number<1) {
+        result.innerHTML='El número es mayor que 1';
         result.classList.add('warning');
         i= i+1;
         counter.innerHTML= i;
@@ -45,8 +44,7 @@ const compare = () => {
         i= i+1;
         counter.innerHTML= i;
     }    
-    console.log(number);
 }
-
+console.log('aleatorio', random);
 
 btn.addEventListener('click', compare);
