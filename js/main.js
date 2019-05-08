@@ -15,6 +15,7 @@ function getRandomNumber(max) {
 const random = getRandomNumber(100);
 
 const compare = () => {
+    debugger
     result.classList.remove('warning', 'correct', 'wrong');
     const number = parseInt(input.value);
     if (number>100) {
@@ -48,3 +49,9 @@ const compare = () => {
 console.log('aleatorio', random);
 
 btn.addEventListener('click', compare);
+
+input.addEventListener('keyup',function(e){
+    if (e.keyCode === 13) {
+        compare();
+  }
+});
